@@ -1,0 +1,56 @@
+.action {
+  width: 135px;
+  height: 52px;
+  padding: 10px 22px;
+  margin: 6px;
+  color: white;
+  border: solid white 1px;
+  border-radius: 4px;
+}
+
+.action:hover {
+  cursor: pointer;
+}
+
+.startgame,
+.pick,
+.approve,
+.reject,
+.succeedmission,
+.failmission,
+.ladyofthelake {
+  @extend .action;
+  span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.startgame {
+  background-color: darkslategray;
+}
+
+.pick {
+  background-color: rosybrown;
+}
+.ladyofthelake {
+  background-color: powderblue;
+}
+
+.approve,
+.succeedmission {
+  background-color: forestgreen;
+}
+
+.reject,
+.failmission {
+  background-color: crimson;
+}
+
+.disabled {
+  background-color: grey;
+}
+
+.disabled:hover {
+  cursor: auto;
+}

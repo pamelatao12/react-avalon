@@ -1,0 +1,28 @@
+.tableWrapper {
+  position: relative;
+}
+.table {
+  /* background-image: url(/pokerTable.svg); */
+  height: 400px;
+  margin-top: 130px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  display: flex;
+}
+
+.tableAmount {
+  display: flex;
+  align-self: center;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-left: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+span {
+  /* font-size: 18px; */
+  margin-right: 5px;
+}

@@ -1,0 +1,7 @@
+.cardSet {
+  margin-left: 30%;
+  padding-top: 14%;
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}

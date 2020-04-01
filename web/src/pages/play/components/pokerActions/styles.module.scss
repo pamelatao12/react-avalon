@@ -1,0 +1,21 @@
+.pokerActionsContainer {
+  .pokerActions {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+
+  .betBtns {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .actionBtns {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

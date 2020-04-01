@@ -1,0 +1,27 @@
+.amountBtn {
+  height: 42px;
+  width: 65px;
+  color: black;
+  border-radius: 30px;
+  background-color: rgb(247, 247, 247);
+  margin: 6px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.amountBtn:hover {
+  cursor: pointer;
+}
+
+.amountBtn:focus {
+  border: 2px solid green;
+  outline: none;
+}
+
+.disabled {
+  background-color: grey;
+}
+
+.disabled:hover {
+  cursor: auto;
+}

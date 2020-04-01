@@ -1,0 +1,322 @@
+.playerProfile1 {
+  position: absolute;
+  top: 72%;
+  left: 45%;
+}
+
+.playerProfile2 {
+  position: absolute;
+  top: 72%;
+  left: 22%;
+}
+
+.playerProfile3 {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.playerProfile4 {
+  position: absolute;
+  top: -15%;
+  left: 18%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.playerProfile5 {
+  position: absolute;
+  top: -25%;
+  left: 36%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.playerProfile6 {
+  position: absolute;
+  top: -25%;
+  left: 52%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.playerProfile7 {
+  position: absolute;
+  top: -15%;
+  left: 70%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.playerProfile8 {
+  position: absolute;
+  top: 40%;
+  left: 72%;
+  display: flex;
+  flex-direction: row;
+}
+
+.playerProfile9 {
+  position: absolute;
+  top: 72%;
+  left: 68%;
+}
+
+.playerBet1,
+.playerBet2,
+.playerBet3,
+.playerBet4,
+.playerBet5,
+.playerBet6,
+.playerBet7,
+.playerBet8,
+.playerBet9 {
+  text-align: center;
+  padding: 10px;
+  background-color: dimgray;
+  /* margin-left: 40px; */
+  border-radius: 10px;
+  font-weight: bolder;
+  max-width: 62px;
+  max-height: 20px;
+  color: white;
+  border: 1px solid black;
+}
+
+.playerBet1 {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.playerBet5,
+.playerBet6 {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.playerBet2 {
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.playerBet3 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.playerBet4 {
+  margin-left: 150px;
+}
+
+.playerBet8 {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.playerBet9 {
+  margin-right: 120px;
+  margin-bottom: 20px;
+}
+
+.playerVotesApprove {
+  background-color: forestgreen;
+}
+
+.playerVotesReject {
+  background-color: crimson;
+}
+
+.noVote {
+  visibility: hidden;
+}
+
+.hideVote {
+  color: transparent;
+}
+
+.dealerChip {
+  border: 1px black solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: white;
+  line-height: 25px;
+}
+
+.sBChip {
+  border: 1px black solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: mediumslateblue;
+  line-height: 25px;
+}
+
+.bBChip {
+  border: 1px black solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: gold;
+  line-height: 25px;
+}
+
+.hasChip1 {
+  margin-left: 5%;
+}
+
+.hasChip2 {
+  margin-left: 80px;
+}
+
+/* .hasChip3 {
+  margin-right: 80px;
+} */
+
+.hasChip4,
+.hasChip5,
+.hasChip6 {
+  margin-left: 100%;
+}
+
+.hasChip7 {
+  margin-top: 8%;
+}
+
+.hasChip8 {
+  margin-top: 20%;
+}
+
+.hasChip9 {
+  margin-left: 30%;
+}
+
+.noChip {
+  border: 1px black solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  background-color: coral;
+  visibility: hidden;
+}
+
+.playerCards1,
+.playerCards2,
+.playerCards3,
+.playerCards4,
+.playerCards5,
+.playerCards6,
+.playerCards7,
+.playerCards8,
+.playerCards9 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  /* width: 6%; */
+  /* top: 110%;
+  position: absolute;
+  left: 46%; */
+}
+
+.playerCards3 {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.playerCards4,
+.playerCards5,
+.playerCards6,
+.playerCards7 {
+  padding-top: 10px;
+}
+
+.playerCards8 {
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+.playerDetailsWrapper {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.playerDetailsWrapperOnTurn {
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  min-width: 150px;
+  max-width: 150px;
+  box-shadow: 0 0px 10px 2px darksalmon, 0 0px 10px 2px antiquewhite;
+  background-color: lightcoral;
+}
+
+.playerDetails {
+  /* align-self: center; */
+  margin-top: 3px;
+  padding-left: 10px;
+  padding-right: 3px;
+}
+
+.hideCharacter {
+  display: none;
+}
+
+.playerCharacter {
+  margin-top: 4px;
+  margin-left: 10px;
+  font-weight: bolder;
+  /* background-color: forestgreen; */
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.goodCharacter {
+  background-color: forestgreen;
+}
+
+.evilCharacter {
+  background-color: crimson;
+}
+
+.playerCharacterWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleCrop {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  border: 6px solid peachpuff;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.circleCrop > img {
+  display: inline;
+  width: 60vw;
+  height: auto;
+  margin-left: -35px;
+  margin-top: -45px;
+  max-width: 607px;
+  max-height: 910px;
+}
