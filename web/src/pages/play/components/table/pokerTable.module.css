@@ -12,6 +12,10 @@
   display: flex;
 }
 
+.hideWinner {
+  display: none;
+}
+
 .tableAmount {
   display: flex;
   align-self: center;

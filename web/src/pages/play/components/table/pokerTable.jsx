@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import styles from "pages/play/components/table/pokerTable.module.css";
 import TableCards from "pages/play/components/table/tableCards";
 import Player from "pages/play/components/table/player";
+import classNames from "classnames";
 
 const PokerTable = () => {
-  const [winner, setWinner] = useState("");
+  const [winner, setWinner] = useState("Resistance");
   const [numPlayers, setNumPlayers] = useState(9);
   const [showVotes, setShowVotes] = useState(false);
+  const [gameState, setGameState] = useState("startGame");
   const [missionDetails, setMissionDetails] = useState([
     [2, 3, 2, 3, 3] /* for 5 players */,
     [2, 3, 4, 3, 4] /* for 6 players */,
@@ -137,8 +139,17 @@ const PokerTable = () => {
         ))}
       </div>
       <div className={styles.table}>
-        <TableCards missionDetails={missionDetails[numPlayers - 5]} />
-        <div className={styles.tableAmount}>Resistance wins!</div>
+        <TableCards
+          missionDetails={missionDetails[numPlayers - 5]}
+          gameState={gameState}
+        />
+        <div
+          className={classNames(
+            winner === "" ? styles.hideWinner : styles.tableAmount
+          )}
+        >
+          {winner} wins!
+        </div>
       </div>
     </div>
   );
