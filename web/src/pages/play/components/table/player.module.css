@@ -1,16 +1,16 @@
-.playerProfile1 {
+.playerProfile0 {
   position: absolute;
   top: 72%;
   left: 45%;
 }
 
-.playerProfile2 {
+.playerProfile1 {
   position: absolute;
   top: 72%;
   left: 22%;
 }
 
-.playerProfile3 {
+.playerProfile2 {
   position: absolute;
   top: 40%;
   left: 3%;
@@ -18,7 +18,7 @@
   flex-direction: row-reverse;
 }
 
-.playerProfile4 {
+.playerProfile3 {
   position: absolute;
   top: -15%;
   left: 18%;
@@ -26,7 +26,7 @@
   flex-direction: column-reverse;
 }
 
-.playerProfile5 {
+.playerProfile4 {
   position: absolute;
   top: -25%;
   left: 36%;
@@ -34,7 +34,7 @@
   flex-direction: column-reverse;
 }
 
-.playerProfile6 {
+.playerProfile5 {
   position: absolute;
   top: -25%;
   left: 52%;
@@ -42,7 +42,7 @@
   flex-direction: column-reverse;
 }
 
-.playerProfile7 {
+.playerProfile6 {
   position: absolute;
   top: -15%;
   left: 70%;
@@ -50,7 +50,7 @@
   flex-direction: column-reverse;
 }
 
-.playerProfile8 {
+.playerProfile7 {
   position: absolute;
   top: 40%;
   left: 72%;
@@ -58,12 +58,13 @@
   flex-direction: row;
 }
 
-.playerProfile9 {
+.playerProfile8 {
   position: absolute;
   top: 72%;
   left: 68%;
 }
 
+.playerBet0,
 .playerBet1,
 .playerBet2,
 .playerBet3,
@@ -71,8 +72,7 @@
 .playerBet5,
 .playerBet6,
 .playerBet7,
-.playerBet8,
-.playerBet9 {
+.playerBet8 {
   text-align: center;
   padding: 10px;
   background-color: dimgray;
@@ -85,36 +85,36 @@
   border: 1px solid black;
 }
 
-.playerBet1 {
+.playerBet0 {
   margin-left: 50px;
   margin-bottom: 20px;
 }
 
-.playerBet5,
-.playerBet6 {
+.playerBet4,
+.playerBet5 {
   margin-left: 50px;
   margin-top: 20px;
 }
 
-.playerBet2 {
+.playerBet1 {
   margin-left: 120px;
   margin-bottom: 20px;
 }
 
-.playerBet3 {
+.playerBet2 {
   margin-top: 30px;
   margin-left: 20px;
 }
-.playerBet4 {
+.playerBet3 {
   margin-left: 150px;
 }
 
-.playerBet8 {
+.playerBet7 {
   margin-top: 30px;
   margin-right: 20px;
 }
 
-.playerBet9 {
+.playerBet8 {
   margin-right: 120px;
   margin-bottom: 20px;
 }
@@ -209,6 +209,7 @@
   visibility: hidden;
 }
 
+.playerCards0,
 .playerCards1,
 .playerCards2,
 .playerCards3,
@@ -216,8 +217,7 @@
 .playerCards5,
 .playerCards6,
 .playerCards7,
-.playerCards8,
-.playerCards9 {
+.playerCards8 {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
@@ -227,19 +227,19 @@
   left: 46%; */
 }
 
-.playerCards3 {
+.playerCards2 {
   padding-top: 15px;
   padding-left: 10px;
 }
 
+.playerCards3,
 .playerCards4,
 .playerCards5,
-.playerCards6,
-.playerCards7 {
+.playerCards6 {
   padding-top: 10px;
 }
 
-.playerCards8 {
+.playerCards7 {
   padding-top: 15px;
   padding-right: 10px;
 }

@@ -1,0 +1,36 @@
+users
+    - id: string (firebase uid)
+    - displayName: string (from firebase)
+
+tables
+    - id: {
+      - seats: {
+         -seat(1-9): seat id
+      }
+      - small blind: integer
+      - big blind: integer
+      - boardCards: string (8H TD AS)
+      - boardState: preflop | flop | turn | river
+      - whoseTurn: seat id
+      - potSize: integer (in cents)
+      - betSizes: {
+        minBet: integer,
+        halfPot: integer,
+        pot: integer,
+      }
+      - deck: string (9D ...) (cards are removed once dealt out)
+      - hasStarted: boolean (requires >1 player)
+      - currentBetSize: integer (in cents, 0 if you can check)
+    }
+
+seats
+    - id: string
+    - userId: string (which user is at this seat)
+    - seatState: seated | standing
+    - stackSize: integer (in cents, 1.00 = 100)
+    - isFolded: boolean
+    - holeCards: string (6H 5C)
+    - currentBetSize: integer (in cents)
+    - isDealer: boolean
+    - isSmallBlind: boolean
+    - isBigBlind: boolean

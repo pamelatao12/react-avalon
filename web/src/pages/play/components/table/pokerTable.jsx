@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "pages/play/components/table/pokerTable.module.css";
 import TableCards from "pages/play/components/table/tableCards";
 import Player from "pages/play/components/table/player";
 import classNames from "classnames";
+import _ from "lodash";
+// import { addPlayerToPositionOnTable } from "pages/play/components/socket_context/emit";
+import SocketContext from "pages/play/components/socket_context/socketContext";
 
-const PokerTable = () => {
+const PokerTable = ({ data }) => {
   const [winner, setWinner] = useState("Resistance");
   const [numPlayers, setNumPlayers] = useState(9);
   const [showVotes, setShowVotes] = useState(false);
+  const [showCharacter, setShowCharacter] = useState(true);
+
   const [gameState, setGameState] = useState("startGame");
   const [missionDetails, setMissionDetails] = useState([
     [2, 3, 2, 3, 3] /* for 5 players */,
@@ -17,6 +22,7 @@ const PokerTable = () => {
     [3, 4, 4, 5, 5] /* for 8, 9, 10 players */,
     [3, 4, 4, 5, 5] /* for 8, 9, 10 players */
   ]);
+  /*
   const [players, setPlayers] = useState([
     {
       name: "Pamela",
@@ -118,26 +124,51 @@ const PokerTable = () => {
       showCharacter: true
     }
   ]);
+  */
 
   const tableAmount = 50.25;
   // how to get total table amount?
+  console.log(data);
+  const drawPlayers = _.times(9).map(i => {
+    console.log("i am in drawPlayers");
+    console.log(i);
+    console.log(data[i]);
+    if (data[i] === undefined || data[i].name === "") {
+      return (
+        <Player
+          name=""
+          pic={`./yay${i + 1}.jpg`}
+          position={i}
+          vote="Approve"
+          character=""
+          isGoingOnMission={false}
+          myTurnToPickMission={false}
+          showCharacter={false}
+          showVotes={false}
+          key={i}
+        />
+      );
+    } else {
+      return (
+        <Player
+          name={data[i].name}
+          pic={`./yay${i + 1}.jpg`}
+          position={data[i].position}
+          vote={data[i].vote}
+          character={data[i].character}
+          isGoingOnMission={data[i].isGoingOnMission}
+          myTurnToPickMission={data[i].myTurnToPickMission}
+          showCharacter={showCharacter}
+          showVotes={showVotes}
+          key={i}
+        />
+      );
+    }
+  });
+
   return (
     <div className={styles.tableWrapper}>
-      <div className={styles.players}>
-        {players.map((player, i) => (
-          <Player
-            name={player.name}
-            pic={player.pic}
-            position={player.position}
-            vote={player.vote}
-            character={player.character}
-            isGoingOnMission={player.isGoingOnMission}
-            myTurnToPickMission={player.myTurnToPickMission}
-            showVotes={showVotes}
-            key={i}
-          />
-        ))}
-      </div>
+      <div className={styles.players}>{drawPlayers}</div>
       <div className={styles.table}>
         <TableCards
           missionDetails={missionDetails[numPlayers - 5]}
