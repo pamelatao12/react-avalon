@@ -17,6 +17,10 @@ const SocketProvider = props => {
     socket.emit("addNewPlayer", { name: player, id: socket.id });
   };
 
+  const buttonClicked = action => {
+    socket.emit("buttonClicked", action);
+  };
+
   /*
   const joinGame = () => {
       const socket = socketIOClient("http://127.0.0.1:4000");
@@ -34,7 +38,7 @@ const SocketProvider = props => {
   if (!socket || !data) return null;
 
   return (
-    <SocketContext.Provider value={{ data, addNewPlayer }}>
+    <SocketContext.Provider value={{ data, addNewPlayer, buttonClicked }}>
       {props.children}
     </SocketContext.Provider>
   );

@@ -49,6 +49,10 @@ const getPlayerDetails = () => {
 
 let playerIds = [];
 let numPlayers = 0;
+let gameDetails = {
+  gameDetails: "",
+  numPlayers: numPlayers
+};
 
 // playerIds:
 // [
@@ -122,9 +126,25 @@ const addPlayer = data => {
     }
   }
 
-  console.log(playerIds);
+  io.to("game").emit("FromAPI", {
+    gameDetails: gameDetails,
+    playerData: getPlayerDetails()
+  });
+};
 
-  io.to("game").emit("FromAPI", getPlayerDetails());
+const handleButtonClick = action => {
+  if (action === "Start Game") {
+    // todo
+    assignRoles();
+    fillInMissions();
+    advanceGameState();
+    makePlayerPickMission();
+
+    io.to("game").emit("FromAPI", {
+      gameDetails: gameDetails,
+      playerData: getPlayerDetails()
+    });
+  }
 };
 
 io.on("connection", socket => {
@@ -136,7 +156,7 @@ io.on("connection", socket => {
   // Add them to our mapping.
   playerIds.push({
     socketId: socket.id,
-    position: ++numPlayers,
+    position: numPlayers,
     person: {
       name: "",
       position: numPlayers,
@@ -149,13 +169,25 @@ io.on("connection", socket => {
       showCharacter: false
     }
   });
-  io.to("game").emit("FromAPI", getPlayerDetails());
+
+  gameDetails.gameState = "startGame";
+  console.log(gameDetails);
+
+  io.to("game").emit("FromAPI", {
+    gameDetails: gameDetails,
+    playerData: getPlayerDetails()
+  });
+  numPlayers++;
 
   // Send out data since someone joined.
   // sendOutData(`${socket.id} joined`);
 
   socket.on("addNewPlayer", data => {
     addPlayer(data);
+  });
+
+  socket.on("buttonClicked", action => {
+    handleButtonClick(action);
   });
 
   // Handler for when someone calls "changeAge" action.

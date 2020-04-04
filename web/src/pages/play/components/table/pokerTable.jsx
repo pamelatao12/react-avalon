@@ -128,12 +128,16 @@ const PokerTable = ({ data }) => {
 
   const tableAmount = 50.25;
   // how to get total table amount?
+
+  console.log("data");
+
   console.log(data);
+  console.log("data.playerData");
+  console.log(data.playerData);
   const drawPlayers = _.times(9).map(i => {
     console.log("i am in drawPlayers");
     console.log(i);
-    console.log(data[i]);
-    if (data[i] === undefined || data[i].name === "") {
+    if (data.playerData[i] === undefined || data.playerData[i].name === "") {
       return (
         <Player
           name=""
@@ -151,13 +155,13 @@ const PokerTable = ({ data }) => {
     } else {
       return (
         <Player
-          name={data[i].name}
+          name={data.playerData[i].name}
           pic={`./yay${i + 1}.jpg`}
-          position={data[i].position}
-          vote={data[i].vote}
-          character={data[i].character}
-          isGoingOnMission={data[i].isGoingOnMission}
-          myTurnToPickMission={data[i].myTurnToPickMission}
+          position={data.playerData[i].position}
+          vote={data.playerData[i].vote}
+          character={data.playerData[i].character}
+          isGoingOnMission={data.playerData[i].isGoingOnMission}
+          myTurnToPickMission={data.playerData[i].myTurnToPickMission}
           showCharacter={showCharacter}
           showVotes={showVotes}
           key={i}
